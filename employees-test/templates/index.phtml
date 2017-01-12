@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test</title>
+        
+    </head>
+    <body>
+
+        <div>
+            <form action="" method="post" accept-charset="utf-8">
+                <input type="text" name="search" placeholder="Buscar por email">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <table>
+            <caption>Lista de todos los empleados</caption>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Posición</th>
+                    <th>Salario</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($employees as $row) {
+                ?>
+                <tr>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['position']; ?></td>
+                    <td><?php echo $row['salary']; ?></td>
+                    <td><a href="./index.php/<?php echo $row['id'];?>/show">Ver Detaller</a></td>
+                </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+    </body>
+</html>

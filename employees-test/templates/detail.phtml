@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test</title>
+        
+    </head>
+    <body>
+
+        <table>
+            <caption>Detalle del empleados id <?=$employees['id'];?></caption>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Posición</th>
+                    <th>Salario</th>
+                    <th>Skills</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><?=$employees['name']; ?></td>
+                    <td><?=$employees['email']; ?></td>
+                    <td><?= $employees['phone']; ?></td>
+                    <td><?= $employees['address']; ?></td>
+                    <td><?=$employees['position']; ?></td>
+                    <td><?= $employees['salary']; ?></td>
+                    <td><?= $employees['skills']; ?></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
